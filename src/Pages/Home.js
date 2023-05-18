@@ -16,6 +16,10 @@ const HVBible = () => {
     const formatNumberWithRegex = (text) => {
       return text.replace(/\d+/g, (match) => `<strong><u>${match}</u></strong>`)
     };
+
+    useEffect(() => {
+      document.title = "HV Bible by MalvinVal";
+    }, []);
   
     useEffect(() => {
       axios.get('https://ajith-holy-bible.p.rapidapi.com/GetVerses', {
